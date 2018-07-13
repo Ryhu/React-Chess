@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.tile{
+  height:65px;
+  width:65px;
+}
+
+.black{
+  background-color:#4D3227;
+}
+
+.white{
+  background-color:#C1A05B;
+}
+
+.possibleMove{
+  background-color: #CDCDCD;
+}
+
+.piece{
+  height:59px;
+  width:59px;
+}
+
+.board {
+  justifyContent: 'center';
+}
