@@ -22,7 +22,7 @@ export default class Board extends React.Component{
       selectedCoords: null,
       playerColor: 'W',
       lightUp: [],
-      turn:false
+      turn:true
     }
   }
 
@@ -53,7 +53,8 @@ export default class Board extends React.Component{
     }
     this.setState({
       board: flipped.reverse(),
-      playerColor: 'B'
+      playerColor: 'B',
+      turn:false
     })
   }
 
@@ -451,7 +452,7 @@ export default class Board extends React.Component{
   }
 
   getMove(move) {
-  
+
     this.setState({
       turn: !this.state.turn
     })
@@ -484,9 +485,6 @@ export default class Board extends React.Component{
     return(<div>
       <ActionCable
         channel={{channel: 'GameRoomChannel'}} onReceived={(move) => this.getMove(move)}/>
-      <ActionCable
-        channel={{channel: 'GameValidationChannel'}}
-        onReceived={(game) => this.startGame(game)}/>
       <div id="gameBoard">
         { this.makeBoard() }
       </div>
