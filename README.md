@@ -1,9 +1,20 @@
-#React Chess
-======
+# React Chess
+
+Chess, made in React with a Ruby on Rails backend.
+The backend is available [Here](https://github.com/Ryhu/React-Chess-api).
 
 
+## Getting Started
 
-This React Chess Game uses a Rails API to run & serve moves via websocket. You can find that socket [here](https://github.com/jrgreiner115/react-chess-api).
+Clone down both this repo and the [backend](https://github.com/Ryhu/React-Chess-api)
+For the game, run
+```
+npm install && npm start
+```
 
+on a separate terminal tab, navigate to the backend repo and run
+```
+rails s
+```
 
-Feel free to clone down and play with!
+the npm install takes a while, but when it completes, your web browser should have a new window with the game running.
